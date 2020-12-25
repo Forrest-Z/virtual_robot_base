@@ -1,0 +1,56 @@
+<launch>
+    <node pkg="virtual_robot_base" type="virtual_base_node" name="virtual_robot_base_node" output="log">
+        <param name="odom_frame" type="str" value="odom"/>
+        <param name="odom_topic" type="str" value="/odom"/>
+        <param name="base_frame" type="str" value="base_footprint"/>
+        <param name="cmd_vel" type="str" value="/cmd_vel_mux/output/cmd_vel"/>
+        <param name="base_sensor_topic" type="str" value="/robot_base/sensors"/>
+    </node>
+
+    <!-- <node pkg="virtual_robot_base" type="virtual_laser_sensor_node" name="virtual_laser_sensor" output="log">
+        <param name="map_topic" type="str" value="/map"/>
+        <param name="map_frame" type="str" value="map"/>
+        <param name="base_frame" type="str" value="base_link"/>
+        <param name="lanser_topic" type="str" value="/scan"/>
+        <param name="laser_frame" type="str" value="laser_merge"/>
+    </node> --> 
+    <node pkg="virtual_robot_base" type="virtual_laser_sensor_with_otherrobots_node" name="virtual_laser_sensor_with_otherrobots_node" output="log">
+        <!-- <param name="map_topic" type="str" value="/navigation_map"/> -->
+        <param name="map_topic" type="str" value="/map"/>
+        <param name="map_frame" type="str" value="map"/>
+        <param name="base_frame" type="str" value="base_link"/>
+        <param name="lanser_topic" type="str" value="/scan"/>
+        <param name="laser_frame" type="str" value="laser_merge"/>
+    </node>
+
+    <node pkg="virtual_robot_base" type="virtual_elevator_ctrl_node" name="virtual_elevator_control_node" output="log">
+        <param name="lift_topic" type="str" value="/lift_state"/>
+        <param name="robot_state_topic" type="str" value="/robot_state"/>
+        <param name="elevator_cmd_topic" type="str" value="/elevator_cmd"/>
+    </node>
+    
+    <node pkg="virtual_robot_base" type="virtual_load_node" name="virtual_load_node"/>
+
+    <!-- <include file="$(find virtual_robot_base)/launch/virtual_cloud.launch" /> -->
+
+<!--
+    <node pkg="virtual_robot_base" type="virtual_docking_sensor_node" name="virtual_docking_sensor_node">
+        <param name="map_frame" type="str" value="map"/>
+        <param name="base_frame" type="str" value="base_link"/>
+        <param name="qr_request_topic" type="str" value="/distinguish_cmd"/>
+        <param name="qr_state_topic" type="str" value="/distinguish_state"/>
+        <param name="qr_pose_topic" type="str" value="/qrcode_rela_pose"/>
+        <param name="base_sensor_topic" type="str" value="/robot_base/sensors"/>
+        <param name="base_ctrl_topic" type="str" value="/robot_docking/control"/>
+    </node>
+
+    <node pkg="virtual_robot_base" type="virtual_docking_node" name="virtual_docking_node">
+        <param name="map_frame" type="str" value="map"/>
+        <param name="base_frame" type="str" value="base_link"/>
+        <param name="base_sensor_topic" type="str" value="/robot_base/sensors"/>
+        <param name="boxmount_cmd_topic" type="str" value="/box_mount_cmd"/>
+        <param name="boxmount_status_topic" type="str" value="/box_mount_state"/>
+        <param name="cmd_vel_topic" type="str" value="/cmd_vel_mux/input/docking"/>
+    </node>
+-->
+</launch>

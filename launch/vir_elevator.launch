@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="virtual_robot_base" type="virtual_elevator_ctrl_node" name="virtual_elevator_control_node" output="screen">
+        <param name="lift_topic" type="str" value="/lift_state"/>
+        <param name="robot_state_topic" type="str" value="/robot_state"/>
+        <param name="elevator_cmd_topic" type="str" value="/elevator_cmd"/>
+        <param name="inside_door_wait_time" type="double" value="20.0"/>
+        <param name="outside_door_wait_time" type="double" value="15.0"/>
+    </node>
+</launch>

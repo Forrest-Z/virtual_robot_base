@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="virtual_robot_base" type="dynamic_obstacle" name="dynamic_obstacle" output="screen">
+    <rosparam  command="load" file="$(find virtual_robot_base)/param/obstacle.yaml"/>
+  </node>
+</launch>

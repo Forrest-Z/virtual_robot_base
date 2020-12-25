@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find virtual_robot_base)/launch/with_br_nodes.launch"/>
+    <arg name="rviz_config_file" value="$(find virtual_robot_base)/rviz/default.rviz"/>
+    <node pkg="rviz" name="rviz" type="rviz" args="-d $(arg rviz_config_file)"/>
+</launch>

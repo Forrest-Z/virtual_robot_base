@@ -1,0 +1,198 @@
+cmdset: ["go"]
+#cmdset: ["go", "ba"]
+
+relocation_pose:
+  building: "bjshow"  #1楼A点
+  level: 1
+  x: -0.5353
+  y: -7.574
+  z: 0.0
+  w: 1.0
+  
+# cmdinfo:
+#   go:
+#     cmdnum: 4 #测试装卸箱
+#     1:
+#       type: 1
+#       action: 0 #装箱
+#       qr: "258" #箱子的qr值
+#     2:
+#       type: 1
+#       action: 1 #卸箱
+#       qr: "119" #充电桩的qr值
+#     3:
+#       type: 1
+#       action: 0 #装箱
+#       qr: "258" #箱子的qr值
+#     4:
+#       type: 1
+#       action: 1 #卸箱
+#       qr: "" #原地卸箱
+
+# shengtaiyuan
+cmdinfo:
+  go:
+    cmdnum: 11
+    1:
+      type: 0  
+      action: 0 #走到1楼装箱B点(4轮4驱对接点)
+      building: "bjshow"
+      level: 1
+      pose:
+        x: 4.3596
+        y: -8.0158
+        z: 0.0
+        w: 1.0
+    2:
+      type: 1
+      action: 0 #装箱
+      qr: "888" #箱子的qr值
+    3:
+      type: 0  
+      action: 0 #走到2楼D点(充电桩前点)
+      building: "bjshow"
+      level: 2
+      pose:
+        x: 2.535
+        y: -8.598
+        z: 0.0
+        w: 1.0
+    4:
+      type: 1
+      action: 1 #卸箱
+      qr: "888" #充电桩的qr值
+    5:
+      type: 0
+      action: 0 #走到2楼空闲点E(A)
+      building: "bjshow"
+      level: 2
+      pose:
+        x: -0.5353
+        y: -7.574
+        z: 0.0
+        w: 1.0
+    6:
+      type: 3
+      sleep_time: 30
+    7:
+      type: 0  
+      action: 0 #走到2楼D点(充电桩前点)
+      building: "bjshow"
+      level: 2
+      pose:
+        x: 2.535
+        y: -8.598
+        z: 0.0
+        w: 1.0
+    8:
+      type: 1  
+      action: 0 #装箱
+      qr: "888" #箱子的qr值
+    9:
+      type: 0  
+      action: 0 ##走到1楼卸箱C点(4轮4驱对接点，原地卸)
+      building: "bjshow"
+      level: 1
+      pose:
+        x: 4.288
+        y: -8.7
+        z: 0.0
+        w: 1.0
+    10:
+      type: 1
+      action: 1 #卸箱
+      qr: ""  #原地卸箱
+    11:
+      type: 0  
+      action: 0 #走到1楼空闲点A
+      building: "bjshow"
+      level: 1
+      pose:
+        x: -0.5353
+        y: -7.574
+        z: 0.0
+        w: 1.0
+
+# dreamwork 6
+# cmdinfo:
+#   go:
+#     cmdnum: 11
+#     1:
+#       type: 0  
+#       action: 0 #走到1楼装箱B点(4轮4驱对接点)
+#       building: "bjshow"
+#       level: 1
+#       pose:
+#         x: 5.0
+#         y: 1.28
+#         z: 0.96
+#         w: 0.28
+#     2:
+#       type: 1
+#       action: 0 #装箱
+#       qr: "888" #箱子的qr值
+#     3:
+#       type: 0  
+#       action: 0 #走到2楼D点(充电桩前点)
+#       building: "bjshow"
+#       level: 2
+#       pose:
+#         x: 3.8038
+#         y: 2.1073
+#         z: 0.9606
+#         w: 0.2776
+#     4:
+#       type: 1
+#       action: 1 #卸箱
+#       qr: "888" #充电桩的qr值
+#     5:
+#       type: 0
+#       action: 0 #走到2楼空闲点E(A)
+#       building: "bjshow"
+#       level: 2
+#       pose:
+#         x: 7.6164
+#         y: -0.287
+#         z: -0.87992
+#         w: 0.47512
+#     6:
+#       type: 3
+#       sleep_time: 30
+#     7:
+#       type: 0  
+#       action: 0 #走到2楼D点(充电桩前点)
+#       building: "bjshow"
+#       level: 2
+#       pose:
+#         x: 3.8038
+#         y: 2.1073
+#         z: 0.9606
+#         w: 0.2776
+#     8:
+#       type: 1  
+#       action: 0 #装箱
+#       qr: "888" #箱子的qr值
+#     9:
+#       type: 0  
+#       action: 0 ##走到1楼卸箱C点(4轮4驱对接点，原地卸)
+#       building: "bjshow"
+#       level: 1
+#       pose:
+#         x: 5.2557
+#         y: 1.7943
+#         z: 0.9624
+#         w: 0.2716
+#     10:
+#       type: 1
+#       action: 1 #卸箱
+#       qr: ""  #原地卸箱
+#     11:
+#       type: 0  
+#       action: 0 #走到1楼空闲点A
+#       building: "bjshow"
+#       level: 1
+#       pose:
+#         x: 7.6164
+#         y: -0.287
+#         z: -0.87992
+#         w: 0.47512
